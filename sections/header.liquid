@@ -1,18 +1,57 @@
-html {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+{% comment %} <header class="header">
+  <div class="header-container">
+    <div class="header-left">
+    <h1>ANVOGUE</h1>
+    <nav>
+      <ul>
+        <li>DEMO</li>
+        <li>FEATURES</li>
+        <li>SHOP</li>
+        <li>PRODUCT</li>
+        <li>BLOG</li>
+        <li>PAGES</li>
+      </ul>
+      </nav>
+    </div>
+  <div class="header-right">
+     <img src="{{ 'search.svg' | asset_url }}" alt="Search icon" class="search-bar" />
+     <img src="{{ 'user.svg' | asset_url }}" alt="user icon" class="user-svg" />
+     <img src="{{ 'heart.svg' | asset_url }}" alt="heart icon" class="heart-svg" />
+     <img src="{{ 'bag.svg' | asset_url }}" alt="bag icon" class="bag-svg" />
+</div>
+  </div>
+</header> {% endcomment %}
+<header class="header">
+  <div class="header-container">
+    <h1 class="logo">ANVOGUE</h1>
 
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    <div class="nav-toggle" id="nav-toggle">
+      <i class="menu-icon"></i>
+    </div>
 
-/* ------------------------------------------------------------------------------------- */
+    <div class="nav-menu" id="nav-menu">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li>DEMO</li>
+          <li>FEATURES</li>
+          <li>SHOP</li>
+          <li>PRODUCT</li>
+          <li>BLOG</li>
+          <li>PAGES</li>
+        </ul>
+      </nav>
+      <div class="nav-icons">
+        <img src="{{ 'search.svg' | asset_url }}" alt="Search icon" class="search-svg" />
+        <img src="{{ 'user.svg' | asset_url }}" alt="User icon" />
+        <img src="{{ 'heart.svg' | asset_url }}" alt="Heart icon" />
+        <img src="{{ 'bag.svg' | asset_url }}" alt="Bag icon" class="bag-svg" />
+      </div>
+    </div>
+  </div>
+</header>
 
-/* header {
+<style>
+  header {
     width: 100%;
     height: 132px;
     margin-top: 0;
@@ -131,59 +170,14 @@ position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-} */
-
-
-/* ----------------------------------------------------------- */
-
-/* FIRST-SECTION */
-
-/* .first-section {
-    width: 100%;
-    height: 500px;
-    margin: 0;
-    position: relative;
 }
 
-.first-section img {
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-    top: 0;
-    margin-top: -67px;
-    padding: 0;
-}
+  </style>
 
-.first-section-content {
-    width: 630px;
-    height: 308px;
-    margin-left: 70px;
-    position: absolute;
-    z-index: 1;
-    margin-top: 30px;
-}
 
-.first-section-content p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-top: 0;
+{% schema %}
+{
+  "name": "Header",
+  "settings": []
 }
-
-.first-section-content h2 {
-    font-size: 80px;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 30px;
-}
-
-.first-section-content button {
-    width: 158px;
-    height: 52px;
-    font-size: 14px;
-    border-radius: 8px;
-    border: none;
-    background-color: #1F1F1F;
-    color: #ffffff;
-    cursor: pointer;
-} */
+{% endschema %}

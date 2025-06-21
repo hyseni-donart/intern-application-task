@@ -1,6 +1,14 @@
 [
   {
     "name": "Theme settings",
-    "settings": []
+    "settings": [
+      {
+        "type": "text",
+        "id": "example_text",
+        "label": "Example text",
+        "default": "Hello world"
+      }
+    ]
   }
 ]
+

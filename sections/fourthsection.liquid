@@ -1,0 +1,234 @@
+<div class="fourth-section">
+<h2>Categories</h2>
+
+
+ <button class="arrow left-arrow">
+    <img src="{{ 'arrow-left.svg' | asset_url }}" alt="Left" />
+  </button>
+
+  <div class="slider-track">
+    <div class="category-card">
+      <img src="{{ 'image-4.jpg' | asset_url }}" alt="Category 1" />
+      <button>Beauty</button>
+    </div>
+    <div class="category-card">
+      <img src="{{ 'image-5.jpg' | asset_url }}" alt="Category 2" />
+      <button>Clothes</button>
+    </div>
+    <div class="category-card">
+      <img src="{{ 'image-6.jpg' | asset_url }}" alt="Category 3" />
+      <button>Sets</button>
+    </div>
+    <div class="category-card">
+      <img src="{{ 'image-7.jpg' | asset_url }}" alt="Category 4" />
+      <button>Accesories</button>
+    </div>
+  </div>
+
+  <button class="arrow right-arrow">
+    <img src="{{ 'arrow-right.svg' | asset_url }}" alt="Right" />
+  </button>
+
+  <div class="options-div">
+<button class="option-button">Best Sellers</button>
+<button class="option-button active">On Sale</button>
+<button class="option-button">New Arrivals</button>
+  </div>
+</div>
+
+<style>
+.fourth-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+}
+
+.fourth-section h2 {
+  font-size: 24px;
+  color: #1F1F1F;
+    text-align: center;
+    font-size: 43.69px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.slider-track {
+    width: 1200px;
+    margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.category-card {
+  flex: 0 0 auto;
+  width: 282px;
+  height: 376px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+}
+
+.category-card button {
+    width: 96px;
+    height: 35px;
+  position: absolute;
+    bottom: 5%;
+  left: 35%;
+  font-size: 14px;
+  color: #1F1F1F;
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;  
+    justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.category-card button:hover {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.arrow {
+    height: 36.63px;
+    width: 36.63px;
+    background-color: #ffffff00;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: background 0.3s;
+  position: absolute;
+  top: 50%;
+}
+
+.arrow.left-arrow {
+  left: 5%;
+}
+
+.arrow.right-arrow {
+  right: 5%;
+}
+
+.arrow img {
+  width: 36.63px;
+  height: 36.63px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border:none
+}
+
+
+
+.fourth-section .options-div {
+    width: 526px;
+    height: 54px;
+    margin: 20px auto;
+    border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F7F7F7;
+}
+
+.fourth-section .options-div .option-button {
+    width: 164px;
+    height: 46px;
+  color: #696C70;
+  border: none;
+    background-color: #ffffff00;
+  border-radius: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;  
+    justify-content: center;
+}
+
+.fourth-section .options-div  .active {
+  color: #1F1F1F;
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+
+.fourth-section .options-div .option-button:hover {
+  color: #1f1f1f;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+</style>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.slider-track');
+  const left = document.querySelector('.left-arrow');
+  const right = document.querySelector('.right-arrow');
+  const buttons = document.querySelectorAll('.option-button');
+
+  let isAnimating = false;
+  const cardWidth = document.querySelector('.category-card').offsetWidth + 20; // include gap
+
+  function smoothShift(direction) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    track.style.transition = 'transform 0.5s ease-in-out';
+    track.style.transform = `translateX(${direction * cardWidth}px)`;
+
+    setTimeout(() => {
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(0)';
+
+      if (direction === -1) {
+        const first = track.firstElementChild;
+        track.appendChild(first);
+      } else {
+        const last = track.lastElementChild;
+        track.insertBefore(last, track.firstElementChild);
+      }
+
+      isAnimating = false;
+    }, 500);
+  }
+
+  left.addEventListener('click', () => smoothShift(1));
+  right.addEventListener('click', () => smoothShift(-1));
+
+   buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+});
+</script>
+
+
+{% schema %}
+{
+  "name": "Fourth Section",
+  "settings": []
+}
+{% endschema %}

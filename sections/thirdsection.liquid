@@ -1,0 +1,87 @@
+<div class="third-section">
+    <div class="third-section-content">
+  <div>
+    <img src="{{ 'phone-24-7.svg' | asset_url }}" alt="phone-icon" />
+    <h3>24/7 Customer Service</h3>
+    <p>We're here to help you with any questions or concerns you have, 24/7.</p>
+  </div>
+  <div>
+    <img src="{{ 'return.svg' | asset_url }}" alt="return-icon" />
+    <h3>14-Day Money Back</h3>
+    <p>If you're not satisfied with your purchase, simply return it within 14 days for a refund.</p>
+  </div>
+  <div>
+    <img src="{{ 'guarantee.svg' | asset_url }}" alt="guarantee-icon" />
+    <h3>Our Guarantee</h3>
+    <p> We stand behind our products and services and guarantee your satisfaction.</p>
+  </div>
+  <div>
+    <img src="{{ 'delivery-truck.svg' | asset_url }}" alt="delivery-truck-icon" class="delivery-truck" />
+    <h3>Shipping worldwide</h3>
+    <p>We ship our products worldwide, making them accessible to customers everywhere.</p>
+  </div>
+  </div>
+</div>
+
+
+
+<style>
+
+.third-section {
+  width: 100%;
+  height: 184px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.third-section-content {
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.third-section-content div {
+  width: 277px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.third-section-content div img {
+  width: 80px;
+  height: 80px;
+}
+
+.third-section-content div h3 {
+  font-size: 20px;
+  color: #1F1F1F;
+}
+
+.third-section-content div p {
+  font-size: 14px;
+  color: #696C70;
+}
+
+.third-section-content div .delivery-truck {
+  width: 80px;
+  height: 80px;
+  padding-bottom: 20px;
+}
+
+</style>
+
+
+
+
+{% schema %}
+{
+  "name": "Third Section",
+  "settings": []
+}
+{% endschema %}

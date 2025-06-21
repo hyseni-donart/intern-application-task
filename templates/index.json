@@ -1,8 +1,30 @@
 {
   "sections": {
-    "main": {
-      "type": "main"
+     "header": {
+      "type": "header"
+    },
+    "firstsection": {
+      "type": "firstsection"
+    },
+    "secondsection": {
+      "type": "secondsection"
+    },
+    "thirdsection": {
+      "type": "thirdsection"
+    },
+    "fourthsection": {
+      "type": "fourthsection"
+    },
+    "fifthsection": {
+      "type": "fifthsection"
     }
   },
-  "order": ["main"]
+  "order": [
+    "header",
+    "firstsection",
+    "secondsection",
+    "thirdsection",
+    "fourthsection",
+    "fifthsection"
+]
 }

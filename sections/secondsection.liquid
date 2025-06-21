@@ -1,0 +1,152 @@
+<div class="second-section">
+  <div class="second-section-left">
+    <img src="{{ 'image-2.png' | asset_url }}" alt="Image" />
+    <div>
+      <h2>Best Sellers</h2>
+      <button>SHOP NOW</button>
+      </div>
+    </div>
+    <div class="second-section-right">
+      <img src="{{ 'image-3.png' | asset_url }}" alt="Image" />
+       <div>
+      <h2>New Arrivals</h2>
+      <button>SHOP NOW</button>
+      </div>
+    </div>
+  </div>
+
+
+  <style>
+    .second-section {
+        max-width: 100%;
+        height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      background-color: #f9f9f9;
+      padding-top: 10px;
+    }
+
+    .second-section-left {
+        position: relative;
+        width: 950px;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .second-section-left img {
+      width: 100%;
+        height: 100%;
+      position: absolute;
+      top: 0;
+  left: 0;
+      z-index: 0;
+
+    }
+
+    .second-section-left div {
+        width: 296px;
+        height:92px;
+        margin-top: 264px;
+      margin-left: 220px;
+        position: absolute;
+      z-index: 1;
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .second-section-left div h2 {
+      font-size: 44px;
+      line-height: 50px;
+      font-weight: 600;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+    }
+    
+    .second-section-left div button {
+      width: 105px;
+      height: 42px;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 600;
+      background-color: #ffffff00;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-bottom: 2px solid #ffffff;
+    }
+
+    .second-section-right {
+        position: relative;
+      width: 950px;
+      height: 100%;
+    }
+
+    .second-section-right img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+        top: 0;
+  left: 0;
+      z-index: 0;
+    }
+
+    .second-section-right div {
+        width: 296px;
+        height:92px;
+        margin-top: 264px;
+      margin-left: 100px;
+        position: absolute;
+      z-index: 1;
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .second-section-right div h2 {
+      font-size: 44px;
+      line-height: 50px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+    }
+    
+    .second-section-right div button {
+      width: 105px;
+      height: 42px;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 600;
+      background-color: #ffffff00;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-bottom: 2px solid #ffffff;
+    }
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Second Section",
+  "settings": []
+}
+{% endschema %}

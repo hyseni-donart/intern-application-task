@@ -1,0 +1,102 @@
+<div class="fifth-section">
+  <div class="fifth-section-content">
+    <div class="fifth-section-left">
+      <h3>SHOP ALL WOMEN’S SUMMER</h3>
+      <p>Discover the brand-new Summer 25/26 collection, available now and ready to refresh your wardrobe. Don’t miss out—get the latest offers and complete your look with effortless, summery charm!</p>
+      <button>Shop All women’s</button>
+    </div>
+    <div class="fifth-section-right">
+      <img src="{{ 'image-8.png' | asset_url }}" alt="Image">
+    </div>
+    
+  </div>
+
+
+
+<style> 
+
+.fifth-section {
+  width: 100%;
+  height: 258px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+.fifth-section-content {
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #009BB9;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.fifth-section-left {
+  width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+    padding: 30px;
+}
+
+.fifth-section-left h3 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+}
+
+.fifth-section-left p {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.fifth-section-left button {
+  width: 160px;
+  height: 35px;
+  background-color: #ffffff;
+  color: #1F1F1F;
+  border: none;
+  border-radius: 7.27px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.fifth-section-left button:hover {
+  background-color: #1F1F1F;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fifth-section-right{
+  width: 588px;
+  height: 100%;
+}
+
+
+</style>
+
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Fifth Section",
+  "settings": []
+}
+{% endschema %}
