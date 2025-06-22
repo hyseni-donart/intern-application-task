@@ -1,0 +1,258 @@
+<div class="sixth-section">
+ <h2>Related Products</h2>
+
+    <div class="sixth-section-products">
+        <div class="product">
+            <img src="{{ 'image-9.png' | asset_url }}" alt="product image" />
+
+<div class="upper">
+    <span>SALE</span>
+    <img src="{{ 'heart.svg' | asset_url }}" alt="heart icon" />
+</div>
+
+            <div>
+                <div class="product-info">
+                    <p>Satin trousers with elastic</p>
+                    <span class="price">$68.00</span>
+                    <span class="original-price">$98.00</span>
+                    <span class="percentage-off">-25%</span>
+                </div>
+                <div class="plus-div">
+                 <img src="{{ 'plus.svg' | asset_url }}" alt="plus icon" />
+                 </div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="{{ 'image-10.png' | asset_url }}" alt="product image" />
+
+
+<div class="upper">
+    <span style="background-color: #D2EF9A;">NEW</span>
+    <img src="{{ 'heart.svg' | asset_url }}" alt="heart icon" />
+</div>
+
+
+           <div>
+                <div class="product-info">
+                    <p>Straight trousers</p>
+                    <span class="price">$68.00</span>
+                </div>
+                <div class="plus-div">
+                 <img src="{{ 'plus.svg' | asset_url }}" alt="plus icon" />
+                 </div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="{{ 'image-11.png' | asset_url }}" alt="product image" />
+
+
+<div class="upper">
+    <span>SALE</span>
+    <img src="{{ 'heart.svg' | asset_url }}" alt="heart icon" />
+</div>     
+           
+            
+           <div>
+                <div class="product-info">
+                    <p>Accessories</p>
+                    <span class="price">$68.00</span>
+                    <span class="original-price">$98.00</span>
+                    <span class="percentage-off">-25%</span>
+                </div>
+                <div class="plus-div">
+                 <img src="{{ 'plus.svg' | asset_url }}" alt="plus icon" />
+                 </div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="{{ 'image-12.png' | asset_url }}" alt="product image" />
+
+
+<div class="upper">
+    <span style="background-color: #D2EF9A;">NEW</span>
+    <img src="{{ 'heart.svg' | asset_url }}" alt="heart icon" />
+</div>
+
+
+           <div>
+                <div class="product-info">
+                    <p>Facial creams</p>
+                    <span class="price">$68.00</span>
+                    <span class="original-price">$98.00</span>
+                    <span class="percentage-off">-25%</span>
+                </div>
+                <div class="plus-div">
+                 <img src="{{ 'plus.svg' | asset_url }}" alt="plus icon" />
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+  .sixth-section {
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+  }
+
+    .sixth-section h2 {
+        font-size: 36px;
+        font-weight: 600;
+        color: #1F1F1F;
+        text-align: center;
+    }
+
+  .sixth-section-products {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+  }
+
+  .sixth-section-products .product {
+    width: 282px;
+    height: 436px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333333;
+    position: relative;
+  }
+
+  .sixth-section-products .product img {
+    width: 100%;
+    height: 375px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+
+    .sixth-section-products .product .upper {
+        width: 100%;
+        height: 21px;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        z-index: 1;
+    }
+
+    .sixth-section-products .product .upper span {
+        font-size: 12px;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #FF0000;
+        padding: 2px 8px;
+        border-radius: 31.79px;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+    }
+
+    .sixth-section-products .product .upper img {
+        width: 15.45px;
+        height:  15.45px;
+        cursor: pointer;
+        top: 10px;
+        right: 20px;
+        border-radius: 0;
+        padding: 2px;
+    }
+
+  .sixth-section-products .product div {
+    width: 100%;
+    height: 47px;
+    position: absolute;
+    bottom: 0;
+    color: #1F1F1F;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 1;
+display: flex;
+align-items: center;
+justify-content: space-between;
+  }
+
+
+    .sixth-section-products .product .product-info {
+        width: 166px;
+        height: 100%;
+        padding: 0px;
+        background-color: #ffffff;
+        display: block;
+    }
+
+    .sixth-section-products .product .product-info p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #1F1F1F;
+            margin: 0;
+            padding-bottom: 7px;
+        }
+
+    .sixth-section-products .product .product-info span {
+        font-weight: 500;
+    }   
+
+    .sixth-section-products .product .product-info .price {
+        font-size: 14px;
+        font-weight: 500;
+        color: #1F1F1F;
+        padding-right: 10px;
+    }
+
+    .sixth-section-products .product .product-info .original-price {
+        font-size: 12px;
+        text-decoration: line-through;
+        color: #A0A0A0;
+        padding-right: 10px;
+    }
+
+    .sixth-section-products .product .product-info .percentage-off {
+        font-size: 12px;
+        color: ;
+        font-weight: bold;
+        background-color: #D2EF9A;
+        border-radius: 31.79px;
+        padding: 2px 8px;
+
+    }
+
+    .sixth-section-products .product div .plus-div {
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+    }
+
+    .sixth-section-products .product div .plus-div img {
+        width: 26px;
+        height: 26px;
+    }
+
+  </style>
+
+
+
+
+{% schema %}
+{
+  "name": "Sixth Section",
+  "settings": []
+}
+{% endschema %}

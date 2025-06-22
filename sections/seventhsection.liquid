@@ -1,0 +1,242 @@
+<div class="seventh-section">
+    <div class="seventh-section-slider">
+
+  
+     <div class="testimonial-track">
+            <div class="testimonial-card">
+        <div class="rating">
+           <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+           <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+           <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+           <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+           <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+        </div>
+
+        <h3>Variety of Styles!</h3>
+        <p>"Fantastic shop! Great selection, fair prices, and friendly staff. Highly recommended. The quality of the products is exceptional, and the prices are very reasonable!"
+        </p>
+        <p>Lisa K.</p>
+        <span>August 13, 2023</span>
+
+            </div>
+            <div class="testimonial-card">
+
+              <div class="rating">
+               <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+               <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+               <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+               <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+                <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+                </div>
+
+              <h3>Quality of Clothing!</h3>
+              <p>"I absolutely love this shop! The products are high-quality and the customer service is excellent. I always leave with exactly what I need and a smile on my face."
+              </p>
+               <p>Mark G.</p>
+              <span>August 13, 2023</span>
+
+            </div>
+             <div class="testimonial-card">
+
+                <div class="rating">
+                  <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+                   <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+                     <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+                    <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+                    <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+                 </div>
+
+                <h3>Customer Service!</h3>
+                 <p>"I love this shop! The products are always top-quality, and the staff is incredibly friendly and helpful. They go out of their way to make sure that I'm satisfied with my purchase.”
+                  </p>
+                  <p>Emily S.</p>
+                  <span>August 13, 2023</span>
+
+
+       </div>
+     </div>
+ 
+    </div>
+
+   <div class="dot-controls">
+    <span class="dot1 active" data-direction="left"></span>
+    <span class="dot1" data-direction="right"></span>
+    <span class="dot1" data-direction="right"></span>
+    <span class="dot1" data-direction="right"></span>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+.seventh-section {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+}
+
+ .seventh-section-slider {
+  overflow: hidden;
+  width: 1230px;
+  height: 296px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.testimonial-track {
+    width: 100%;
+    height: 296px;
+  display: flex;
+    align-items: center;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+  background-color: #FAFAFA;
+  border-radius: 16px;
+  {% comment %} padding: 20px; {% endcomment %}
+  width: 380px;
+  height: 100%;
+  background-color: #FAFAFA;
+  border-radius: 16px;
+}
+
+.seventh-section .testimonial-card .rating {
+  width: 80px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0 0 25px;
+}
+
+.seventh-section .testimonial-card .rating img {
+  width: 16px;
+  height: 16px;
+}
+
+.seventh-section .testimonial-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F1F1F;
+  margin-left: 25px;
+}
+
+.seventh-section .testimonial-card p {
+  font-size: 16px;
+  color: #1f1f1f;
+  line-height: 26px;
+  margin: 10px 25px 0 25px;
+}
+
+.seventh-section .testimonial-card span {
+  font-size: 12px;
+  color: #A0A0A0;
+  margin-left: 25px;
+    margin-top: 0px;
+}
+
+.seventh-section .dot-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.seventh-section .dot1 {
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #1F1F1F;
+  transition: background-color 0.3s;
+}
+
+.seventh-section .dot1.active {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #1F1F1F;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seventh-section .dot1.active::after {
+  content: '';
+position: absolute;
+width: 7px;
+height: 7px;
+border-radius: 50%;
+background-color: #1F1F1F;
+}
+
+</style>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.testimonial-track');
+  const cards = Array.from(track.children);
+  const dots = document.querySelectorAll('.dot1');
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      if (dot.classList.contains('active')) return;
+
+      dots.forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+
+      const direction = dot.dataset.direction;
+
+      track.style.transition = 'transform 0.5s ease';
+      track.style.transform = direction === 'right' ? 'translateX(-100%)' : 'translateX(100%)';
+
+      setTimeout(() => {
+        track.style.transition = 'none';
+        track.innerHTML = '';
+
+        cards.forEach(card => {
+          track.appendChild(card.cloneNode(true));
+        });
+
+        track.style.transform = direction === 'right' ? 'translateX(100%)' : 'translateX(-100%)';
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            track.style.transition = 'transform 0.5s ease';
+            track.style.transform = 'translateX(0)';
+          });
+        });
+      }, 500);
+    });
+  });
+
+});
+</script>
+
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Seventh Section",
+  "settings": []
+}
+{% endschema %}

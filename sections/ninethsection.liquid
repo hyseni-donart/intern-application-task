@@ -1,0 +1,80 @@
+<div class="nineth-section">
+  <div class="container">
+    <div class="title-div">
+        <h3>Anvogue On Instagram</h3>
+        <p>#Anvougetheme</p>
+    </div>
+    <div class="image-div">
+        <img src="{{ 'image-13.png' | asset_url }}" alt="Image"/>
+        <img src="{{ 'image-14.png' | asset_url }}" alt="Image"/>
+        <img src="{{ 'image-15.png' | asset_url }}" alt="Image"/>
+        <img src="{{ 'image-16.png' | asset_url }}" alt="Image"/>
+        <img src="{{ 'image-17.png' | asset_url }}" alt="Image"/>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+<style>
+
+.nineth-section {
+  width: 100%;
+  height: auto;
+}    
+
+.nineth-section .container {
+    width: 1230px;
+    height: 371px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nineth-section .container .title-div {
+    width: 366px;
+    height: 86px;
+    text-align: center;
+}
+
+.nineth-section .container .title-div h3 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #1F1F1F;
+    margin: 0;
+}
+
+.nineth-section .container .title-div p {
+    font-size: 16px;
+    color: #1F1F1F;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.nineth-section .container .image-div {
+    width: 100%;
+    height: 245px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nineth-section .container .image-div img {
+    width: 230px;
+    height: 230px;
+    border-radius: 32px;
+}
+
+</style>
+
+
+{% schema %}
+{
+  "name": "Nineth Section",
+  "settings": []
+}
+{% endschema %}

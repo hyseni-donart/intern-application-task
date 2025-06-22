@@ -17,6 +17,24 @@
     },
     "fifthsection": {
       "type": "fifthsection"
+    },
+    "sixthsection": {
+      "type": "sixthsection"
+    },
+    "seventhsection": {
+      "type": "seventhsection"
+    },
+    "eighthsection": {
+      "type": "eighthsection"
+    },
+    "ninethsection": {
+      "type": "ninethsection"
+    },
+    "brandsection": {
+      "type": "brandsection"
+    },
+    "footer": {
+      "type": "footer"
     }
   },
   "order": [
@@ -25,6 +43,12 @@
     "secondsection",
     "thirdsection",
     "fourthsection",
-    "fifthsection"
+    "fifthsection",
+    "sixthsection",
+    "seventhsection",
+    "eighthsection",
+    "ninethsection",
+    "brandsection",
+    "footer"
 ]
 }

@@ -1,0 +1,47 @@
+<div class="brand-section">
+    <div class="container">
+            <img src="{{ '1.svg' | asset_url }}" alt="Brand 1">
+            <img src="{{ '2.svg' | asset_url }}" alt="Brand 2">
+            <img src="{{ '3.svg' | asset_url }}" alt="Brand 3">
+            <img src="{{ '4.svg' | asset_url }}" alt="Brand 3">
+            <img src="{{ '5.svg' | asset_url }}" alt="Brand 3">
+            <img src="{{ '6.svg' | asset_url }}" alt="Brand 3">
+        </div>
+  </div>
+
+
+
+<style>
+
+.brand-section {
+  width: 100%;
+  height: auto;
+}
+
+.brand-section .container {
+  width: 1230px;
+  height: 44px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-section .container img {
+  width: 150px;
+  height: 40px;
+}
+
+
+
+
+</style>
+
+
+
+{% schema %}
+{
+  "name": "Brand Section",
+  "settings": []
+}
+{% endschema %}
