@@ -1,40 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-     "header": {
-      "type": "header"
+    "header": {
+      "type": "header",
+      "settings": {}
     },
     "firstsection": {
-      "type": "firstsection"
+      "type": "firstsection",
+      "settings": {}
     },
     "secondsection": {
-      "type": "secondsection"
+      "type": "secondsection",
+      "settings": {}
     },
     "thirdsection": {
-      "type": "thirdsection"
+      "type": "thirdsection",
+      "settings": {}
     },
     "fourthsection": {
-      "type": "fourthsection"
+      "type": "fourthsection",
+      "settings": {}
     },
     "fifthsection": {
-      "type": "fifthsection"
+      "type": "fifthsection",
+      "settings": {}
     },
     "sixthsection": {
-      "type": "sixthsection"
+      "type": "sixthsection",
+      "settings": {}
     },
     "seventhsection": {
-      "type": "seventhsection"
+      "type": "seventhsection",
+      "settings": {}
     },
     "eighthsection": {
-      "type": "eighthsection"
+      "type": "eighthsection",
+      "settings": {}
     },
     "ninethsection": {
-      "type": "ninethsection"
+      "type": "ninethsection",
+      "settings": {}
     },
     "brandsection": {
-      "type": "brandsection"
+      "type": "brandsection",
+      "settings": {}
     },
     "footer": {
-      "type": "footer"
+      "type": "footer",
+      "settings": {}
     }
   },
   "order": [
@@ -50,5 +71,5 @@
     "ninethsection",
     "brandsection",
     "footer"
-]
+  ]
 }
