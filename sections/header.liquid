@@ -3,7 +3,7 @@
     <h1 class="logo">ANVOGUE</h1>
 
      <div class="nav-toggle" id="nav-toggle">
-      <div class="menu-icon" id="menu-icon">
+      <div class="menu-icon">
         <div></div>
         <div></div>
         <div></div>
@@ -193,17 +193,111 @@ position: relative;
   }
 
   .nav-icons {
-    width: 140px;
+    width: 80px;
+    padding-right: 5px;
+  }
+
+  .nav-icons img {
+    width: 15px;
+    height: 15px;
   }
 
   .nav-icons .search-svg {
-    padding-right: 20px;
+    padding-right: 7px;
   }
 }
 
+/* Default (desktop) */
+.nav-toggle {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
-  .header {
-    height: 80px;
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 40px 20px 40px 0; /* top right bottom left */
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+ .nav-list {
+  list-style: none;
+  margin: 0;     
+  padding-left: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-list li {
+  display: block;
+  color: #1f1f1f;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 19px;
+  text-align: left;
+  position: relative;
+  box-sizing: border-box;
+  text-indent: 0;  
+  padding-left: 0;  
+  border: none;    
+}
+
+
+  .nav-list li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;  /* changed from 50% to 0 for underline starting at left edge */
+    width: 0;
+    height: 2px;
+    background-color:rgb(255, 255, 255);
+    transition: width 0.3s ease;
+  }
+
+  .nav-list li:hover::after {
+    width: 100%;
+  }
+
+  .nav-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    padding-left: 7px;
+    width: 100%;
+  }
+
+  .nav-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    cursor: pointer;
   }
 
   .nav-toggle {
@@ -211,75 +305,7 @@ position: relative;
     align-items: center;
     justify-content: center;
     margin-right: 30px;
-  }
-
-  #nav-menu {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 80%;
-    height: 100vh;
-    background-color: rgb(131, 67, 67);
-    padding: 40px 20px;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-    transition: left 0.3s ease;
-    z-index: 9998;
-    display: flex;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-
-.nav {
-    width: 50%;
-    background-color: bisque;
-    display: block; /* was flex, not needed */
-    position: absolute;
-    left: 0;
-  }
-
-  .nav ul {
-     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-    width: auto;
-  }
-
-  .nav-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-    width: auto; /* prevent full width stretching */
-  }
-
-  .nav-list li {
-    width: auto;
-    padding: 10px 0;
-    text-align: left;
-  }
-}
-
-.nav-icons {
-  background-color: blue;
-  display: flex;
-  flex-direction: column;
-}
-
-
-  .header-container h1 {
-    font-size: 24px;
-    margin-left: 30px;
+    z-index: 10001;
   }
 }
 
