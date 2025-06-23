@@ -1,0 +1,76 @@
+<div class="page-section-one">
+
+    <div class="left">
+        <p style="color: #A0A0A0;">Homepage</p>
+        <img src="{{ 'small-arrow.svg' | asset_url }}" alt="arrow-icon" />
+        <p style="color: #A0A0A0;">Women</p>
+         <img src="{{ 'small-arrow.svg' | asset_url }}" alt="arrow-icon" />
+        <p>Leather boots with tall leg</p>
+    </div>
+
+    <div class="right">
+        <img src="{{ 'arrow-left.svg' | asset_url }}" alt="left" />
+        <p>Previous Product</p>
+        <span></span>
+        <p>Next Product</p>
+        <img src="{{ 'arrow-right.svg' | asset_url }}" alt="Right" />
+    </div>
+
+
+</div>
+
+
+<style>
+
+    .page-section-one {
+    width:100%;
+    height:60px;
+    background-color: #F7F7F7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+    }
+
+    .page-section-one .left,
+    .page-section-one .right {
+        height: 23px;
+        width: auto;
+        margin-left: 70px;
+        margin-right: 70px;
+        display: flex;
+        align-items: center;
+    }
+
+    .page-section-one .left p {
+        padding: 0 5px;
+        color: #1f1f1f;
+    }
+
+    .page-section-one .right p {
+        padding: 0 8px;
+        color: #1f1f1f;
+    }
+
+    .page-section-one .right span {
+        width: 1px;
+        height: 100%;
+        background-color: #E9E9E9;
+    }
+
+    .page-section-one .right img {
+        cursor: pointer;
+    }
+            
+
+
+
+</style>
+
+
+
+{% schema %}
+{
+  "name": "Page Section One",
+  "settings": []
+}
+{% endschema %}

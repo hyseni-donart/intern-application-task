@@ -1,0 +1,81 @@
+<div class="page-section-three">
+    <div class="page-section-three-content">
+  <div>
+    <img src="{{ 'delivery-truck.svg' | asset_url }}" alt="delivery-truck-icon" />
+    <h3>Shipping Faster</h3>
+    <p>Use on walls, furniture, doors and many more surfaces. The possibilities are endless.</p>
+  </div>
+  <div>
+    <img src="{{ 'tree.svg' | asset_url }}" alt="tree-icon" />
+    <h3>Cotton Material</h3>
+    <p>Use on walls, furniture, doors and many more surfaces. The possibilities are endless.</p>
+  </div>
+  <div>
+    <img src="{{ 'guarantee.svg' | asset_url }}" alt="guarantee-icon" />
+    <h3>High Quality</h3>
+    <p>Use on walls, furniture, doors and many more surfaces. The possibilities are endless.</p>
+  </div>
+  <div>
+    <img src="{{ 'leaf.svg' | asset_url }}" alt="leaf icon"/>
+    <h3>Highly Compatible</h3>
+    <p>Use on walls, furniture, doors and many more surfaces. The possibilities are endless.</p>
+  </div>
+  </div>
+</div>
+
+
+
+<style>
+
+.page-section-three {
+  width: 100%;
+  height: 184px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.page-section-three-content {
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-section-three-content div {
+  width: 277px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page-section-three-content div img {
+  width: 80px;
+  height: 80px;
+}
+
+.page-section-three-content div h3 {
+  font-size: 20px;
+  color: #1F1F1F;
+}
+
+.page-section-three-content div p {
+  font-size: 14px;
+  color: #696C70;
+}
+
+</style>
+
+
+
+
+{% schema %}
+{
+  "name": "Page Section Three",
+  "settings": []
+}
+{% endschema %}

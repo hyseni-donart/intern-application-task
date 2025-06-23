@@ -1,0 +1,595 @@
+<div class="page-product-section">
+
+    <div class="container">
+
+        <div class="left">
+            <div class="item-1">
+                <img src="{{ 'img-1.png' | asset_url }}" alt="product image" />
+            </div>
+            <div class="item-2">
+                <img src="{{ 'img-2.png' | asset_url }}" alt="product image" />
+            </div>
+            <div class="item-3">
+                <img src="{{ 'img-2.png' | asset_url }}" alt="product image" />
+            </div>
+            <div class="item-4">
+                <img src="{{ 'img-3.png' | asset_url }}" alt="product image" />
+            </div>
+            <div class="item-5">
+                <img src="{{ 'img-4.png' | asset_url }}" alt="product image" />
+            </div>
+        </div>
+
+
+        <div class="right">
+            <div class="part-1">
+                <p>CLOTHING</p>
+                <h3>Ribbed Short-sleeved t-shirt</h3>
+                <div class="rating">
+                     <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+                     <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+                     <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+                     <img src="{{ 'star.svg' | asset_url }}" alt="star icon" />
+                     <img src="{{ 'empty-star.svg' | asset_url }}" alt="star icon"/>
+                     <span style="color: #696C70">(1.234 reviews)</span>
+                </div>
+                <h5>$68.00</h5>
+                <p>The garments labelled as Committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact.</p>
+                <img src="{{ 'heart.svg' | asset_url }}" alt="heart icon" class="heart" />
+            </div>
+            <div class="part-2">
+                <div class="upper">
+                    <p style="padding-top: 0; margin-top:0;">Colors: <span id="selected-color">Blue</span></p>
+                    <div class="product-colors">
+                        <div class="color-1" data-color="Yellow"></div>
+                        <div class="color-2" data-color="Green"></div>
+                        <div class="color-3 active" data-color="Blue"></div>
+                        <div class="color-4" data-color="Red"></div>
+                        <div class="color-5" data-color="White"></div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <p style="padding-top: 0; margin-top:0;">Size: <span style="padding-right: 5px;" id="selected-size">L</span><span style="padding-left: 5px; text-decoration: underline; color:#DB4444;">Size Guide</span></p>
+                    <div class="product-sizes">
+                        <div class="size-1" data-size="S">S</div>
+                        <div class="size-2" data-size="M">M</div>
+                        <div class="size-3 active" data-size="L">L</div>
+                        <div class="size-4" data-size="XL">XL</div>
+                        <div class="size-5" data-size="XXL">XXL</div>
+                    </div>
+                </div>
+                <div class="lower">
+                    <p style="font-size: 16px; color: #1f1f1f; padding-top: 0; margin-top: 0;">Quantity:</p>
+                    <button>PURCHASE ON AMAZON</button>
+                    <div>
+                        <img src="{{ 'compare.svg' | asset_url }}" alt="compare-icon" style="padding-right: 10px; cursor: pointer;" />
+                        <p style="padding-right: 30px;">Compare</p>
+                        <img src="{{ 'wishlist.svg' | asset_url }}" alt="wishlist-icon" style="padding-right: 10px; cursor: pointer;" />
+                        <p>Share Products</p>
+                    </div>
+                </div>
+            </div>
+            <div class="part-3">
+                <h4>Get it today</h4>
+                <div class="upper">
+                    <img src="{{ 'delivery-truck.svg' | asset_url }}" alt="delivery-truck-icon" />
+                    <p>Free shipping <span>Free shipping on orders over $75.</span></p>
+                </div>
+                <div class="middle">
+                    <img src="{{ 'return.svg' | asset_url }}" alt="box-icon" />
+                    <p>100 - Day Returns <span>Support from 8:30 AM to 10:00 PMeveryday</span></p>
+                </div>
+                <div class="lower">
+                    <img src="{{ 'phone-24-7.svg' | asset_url }}" alt="phone-icon" />
+                    <p>100 - Day Returns <span>Not impressed? Get a refund. You have 100 days to break our hearts.</span></p>
+                </div>
+            </div>
+            <div class="part-4">
+                <div class="upper">
+                    <h4>Description</h4>
+                    <p>Keep your ho me organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!</p>
+                </div>
+                <div class="lower">
+                    <h4>About This Product</h4>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Nulla luctus libero quis mauris vestibulum dapibus.</li>
+                        <li>Maecenas ullamcorper erat mi, vel consequat enim suscipit at.</li>
+                        <li>Quisque consectetur nibh ac urna molestie scelerisque.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<style>
+
+    .page-product-section {
+        width: 100%;
+        height: auto;
+    }
+
+    .page-product-section .container {
+        width: 1230px;
+        height: 1300px;
+        margin: 80px auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .page-product-section .container .left {
+        width: 585px;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .page-product-section .container .left div {
+        height: 386px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+     .page-product-section .container .left img {
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .page-product-section .container .left .item-1 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    .page-product-section .container .left .item-2 {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+    }
+
+    .page-product-section .container .left .item-3 {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+      .page-product-section .container .left .item-3 img {
+        height: 150%;
+        width: 150%;
+        border-radius: 20px;
+    }
+
+    .page-product-section .container .left .item-4 {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+
+    .page-product-section .container .left .item-5 {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+        margin-bottom: 80px;
+    }
+
+
+
+    .page-product-section .container .right {
+        width: 570px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .page-product-section .container .right .part-1 {
+        width: 100%;
+        height: 236px;
+        position: relative;
+        border-bottom: 1px solid #E9E9E9;
+    }
+
+    .page-product-section .container .right .part-1 .heart {
+        width: 20px;
+        height: 20px;
+        background-color: color: #696C70;;
+        right: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    .page-product-section .container .right .part-1 h3 {
+        font-size: 36px;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        color: #1F1F1F;
+    }
+
+    .page-product-section .container .right .part-1 h5 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 30px 0;
+        color: #1F1F1F;
+    }
+
+    .page-product-section .container .right .part-1 p {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 20px;
+        padding: 0;
+        color: #696C70;
+    }
+
+    .page-product-section .container .right .part-2 {
+        width: 100%;
+        height: 384px;
+        border-bottom: 1px solid #E9E9E9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .page-product-section .container .right .part-2 .upper {
+        width: 272px;
+        height: 84px;
+        font-size: 16px;
+        color: #1f1f1f;
+        padding: 0;
+    }
+
+    .page-product-section .container .right .part-2 .upper .product-colors {
+        width: 272px;
+        height: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-product-section .container .right .part-2 .upper .product-colors div:hover {
+        opacity: 100%;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+    }
+
+    .page-product-section .container .right .part-2 .upper .product-colors .color-1 {
+        width: 48px;
+        height: 48px;
+        background-color: #FFD34F;
+        border-radius: 12px;
+        opacity: 30%;
+        border: 1px solid #1f1f1f;
+    }
+
+    .page-product-section .container .right .part-2 .upper .product-colors .color-2 {
+        width: 48px;
+        height: 48px;
+        background-color: #096F00;
+        border-radius: 12px;
+        opacity: 30%;
+        border: 1px solid #1f1f1f;
+    }
+
+    .page-product-section .container .right .part-2 .upper .product-colors .color-3 {
+        width: 48px;
+        height: 48px;
+        background-color: #001182;
+        border-radius: 12px;
+        opacity: 30%;
+        border: 1px solid #1f1f1f;
+    }
+
+    .page-product-section .container .right .part-2 .upper .product-colors .color-4 {
+        width: 48px;
+        height: 48px;
+        background-color: #FF7373;
+        border-radius: 12px;
+        opacity: 30%;
+        border: 1px solid #1f1f1f;
+    }
+
+    .page-product-section .container .right .part-2 .upper .product-colors .color-5 {
+        width: 48px;
+        height: 48px;
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        opacity: 30%;
+        border: 1px solid #1f1f1f;
+    }
+
+    .page-product-section .container .right .part-2 .upper  .product-colors .active {
+        opacity: 100%;
+    }
+
+    .page-product-section .container .right .part-2 .middle {
+        width: 100%;
+        height: 84px;
+        font-size: 16px;
+        color: #1f1f1f;
+        padding: 0;
+    }
+
+    .page-product-section .container .right .part-2 .middle .product-sizes {
+        width: 272px;
+        height: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+     .page-product-section .container .right .part-2 .middle .product-sizes div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page-product-section .container .right .part-2 .middle .product-sizes div:hover {
+        cursor: pointer;
+        color: #ffffff;
+        background-color: #000000;
+        opacity: 100%;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .page-product-section .container .right .part-2 .middle .product-sizes .size-1 {
+        width: 48px;
+        height: 48px;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 50%;
+        opacity: 60%;
+        border: 1px solid #1f1f1f;
+    }
+
+    .page-product-section .container .right .part-2 .middle .product-sizes .size-2 {
+        width: 48px;
+        height: 48px;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 50%;
+        border: 1px solid #1f1f1f;
+        opacity: 60%;
+    }
+
+    .page-product-section .container .right .part-2 .middle .product-sizes .size-3 {
+        width: 48px;
+        height: 48px;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 50%;
+        border: 1px solid #1f1f1f;
+        opacity: 60%;
+    }
+
+    .page-product-section .container .right .part-2 .middle .product-sizes .size-4 {
+        width: 48px;
+        height: 48px;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 50%;
+        border: 1px solid #1f1f1f;
+        opacity: 60%;
+    }
+
+    .page-product-section .container .right .part-2 .middle .product-sizes .size-5 {
+        width: 48px;
+        height: 48px;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 50%;
+        border: 1px solid #1f1f1f;
+        opacity: 60%;
+    }
+
+    .page-product-section .container .right .part-2 .middle  .product-sizes .active {
+        background-color: #000000;
+        color: #ffffff;
+        opacity: 100%;
+    }
+
+    .page-product-section .container .right .part-2 .lower {
+        width: 100%;
+        height: 152px;
+        border-bottom: 1px solid #E9E9E9;
+        font-size: 16px;
+        color: #1f1f1f;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .page-product-section .container .right .part-2 .lower button {
+        width: 100%;
+        height: 48px;
+        background-color: #1f1f1f;
+        border: 1px solid #1f1f1f;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .page-product-section .container .right .part-2 .lower button:hover {
+        background-color:rgb(70, 70, 70);
+        border: 1px solid #1f1f1f;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .page-product-section .container .right .part-2 .lower div {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        color: #1f1f1f;
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    .page-product-section .container .right .part-3 {
+        width: 100%;
+        height: 216px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid #E9E9E9;
+    }
+
+    .page-product-section .container .right .part-3 h4 {
+        font-size: 24px;
+        color: #1F1F1F;
+        margin: 0;
+        padding: 0;
+    }
+
+    .page-product-section .container .right .part-3 img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .page-product-section .container .right .part-3 p {
+       font-size: 16px;
+       text-align: left;
+       margin-left: 20px
+    }
+
+    .page-product-section .container .right .part-3 span {
+       font-size: 14px;
+       color: #696C70;
+       display: block;
+       margin-top: 9px;
+    }
+
+    .page-product-section .container .right .part-3 .upper {
+        width: 254px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .page-product-section .container .right .part-3 .middle {
+        width: 331px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .page-product-section .container .right .part-3 .lower {
+        width: 469px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .page-product-section .container .right .part-4 {
+        width: 100%;
+        height: 414px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid #E9E9E9;
+    }
+  
+    .page-product-section .container .right .part-4 .upper {
+        width: 100%;
+        height: 192px;
+    }
+
+     .page-product-section .container .right .part-4 .upper h4 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        color: #1F1F1F;
+    }
+
+    .page-product-section .container .right .part-4 .upper p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        color: #696C70;
+    }
+
+    .page-product-section .container .right .part-4 .lower {
+        width: 100%;
+        height: 190px;
+        background-color: white;
+    }
+
+    .page-product-section .container .right .part-4 .lower h4 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        color: #1F1F1F;
+    }
+
+    .page-product-section .container .right .part-4 .lower ul {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        margin-top: 20px;
+        padding-left: 22px;
+    }
+
+    .page-product-section .container .right .part-4 .lower ul li {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        color: #696C70;
+        margin-top: 10px;
+    }
+
+
+
+</style>
+
+
+<script>
+
+document.querySelectorAll('.product-colors div').forEach(colorDiv => {
+  colorDiv.addEventListener('click', () => {
+
+    document.querySelectorAll('.product-colors div').forEach(div => div.classList.remove('active'));
+
+    colorDiv.classList.add('active');
+
+    const selectedColor = colorDiv.getAttribute('data-color');
+    document.getElementById('selected-color').textContent = selectedColor;
+  });
+});
+
+document.querySelectorAll('.product-sizes div').forEach(sizeDiv => {
+  sizeDiv.addEventListener('click', () => {
+
+    document.querySelectorAll('.product-sizes div').forEach(div => div.classList.remove('active'));
+
+    sizeDiv.classList.add('active');
+
+    const selectedSize = sizeDiv.getAttribute('data-size');
+    document.getElementById('selected-size').textContent = selectedSize;
+  });
+});
+
+</script>
+
+{% schema %}
+{
+  "name": "Page Product Section",
+  "settings": []
+}
+{% endschema %}
