@@ -30,7 +30,7 @@
 
     .second-section-left {
         position: relative;
-        width: 950px;
+        width: 49.5%;
       height: 100%;
       overflow: hidden;
     }
@@ -88,7 +88,7 @@
 
     .second-section-right {
         position: relative;
-      width: 950px;
+      width: 49.5%;
       height: 100%;
     }
 
@@ -141,6 +141,71 @@
       transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     }
 
+
+
+@media screen and (max-width: 1024px) {
+  .second-section {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 10px;
+    gap: 30px;
+  }
+
+  .second-section-left,
+  .second-section-right {
+    width: 100%;
+    height: 350px;
+  }
+
+  .second-section-left div,
+  .second-section-right div {
+    margin-top: 100px;
+    margin-left: 40px;
+    width: auto;
+  }
+
+  .second-section-left div h2,
+  .second-section-right div h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .second-section-left div button,
+  .second-section-right div button {
+    font-size: 14px;
+    width: 100px;
+    height: 40px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .second-section-left,
+  .second-section-right {
+    height: 200px;
+  }
+
+  .second-section-left div,
+  .second-section-right div {
+    margin-top: 60px;
+    padding: 0 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .second-section-left div h2,
+  .second-section-right div h2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .second-section-left div button,
+  .second-section-right div button {
+    font-size: 13px;
+    width: 90px;
+    height: 36px;
+  }
+}
 
 
     </style>

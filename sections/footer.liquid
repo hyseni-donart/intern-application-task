@@ -84,7 +84,7 @@
 
 .footer {
   width: 100%;
-  height: 369px;
+  height: auto;
   background-color: #F7F7F7;
   text-align: center;
   margin-top: 60px;
@@ -264,6 +264,75 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .footer .upper {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .footer .upper .left,
+  .footer .upper .right {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .footer .upper .middle {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+}
+
+/* Phones and small devices */
+@media screen and (max-width: 480px) {
+  .footer .upper .middle {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer .upper .middle div {
+    flex: 1 1 45%;
+    min-width: 150px;
+  }
+
+  .footer .upper .left,
+  .footer .upper .right {
+    max-width: 100%;
+  }
+
+  .footer .upper {
+    gap: 20px;
+  }
+
+  .footer .upper p {
+    max-width: 160px;
+}
+
+  .footer .lower {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+
+  .footer .lower p,
+  .footer .lower div {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer .upper .right form {
+    width: 270px;
+    height: 40px;
+}
 }
 
 

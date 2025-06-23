@@ -56,17 +56,19 @@
 }
 
 .slider-track {
-    width: 1200px;
+    width: 95%;
+    height: auto;
     margin: 60px auto;
   display: flex;
   justify-content: space-between;
   transition: transform 0.5s ease-in-out;
   overflow: hidden;
+
 }
 
 .category-card {
   flex: 0 0 auto;
-  width: 282px;
+  width: 23%;
   height: 376px;
   border-radius: 12px;
   overflow: hidden;
@@ -141,7 +143,7 @@
 
 
 .fourth-section .options-div {
-    width: 526px;
+    width: 40%;
     height: 54px;
     margin: 20px auto;
     border-radius: 16px;
@@ -152,7 +154,7 @@
 }
 
 .fourth-section .options-div .option-button {
-    width: 164px;
+    width: 30%;
     height: 46px;
   color: #696C70;
   border: none;
@@ -176,6 +178,106 @@
   background-color: #ffffff;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  .fourth-section h2 {
+    font-size: 34px;
+  }
+
+
+  .slider-track {
+    width: 100%;
+    max-width: 900px;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+
+  .category-card {
+    width: calc((100% - 40px) / 3);
+    height: auto;
+    aspect-ratio: 282 / 376;
+  }
+
+  .category-card img {
+    height: auto;
+  }
+
+  .category-card button {
+     width: 60px;
+    height: 25px;
+  }
+
+  .fourth-section .options-div {
+    width:40%;
+    height: 54px;
+    margin: 14px auto;
+}
+
+.fourth-section .options-div .option-button {
+    width: 30%;
+    height: 46px;
+  font-size: 18px;
+}
+}
+
+@media (max-width: 767px) {
+
+  .fourth-section h2 {
+    font-size: 30px;
+  }
+
+
+  .slider-track {
+    width: 90%;
+    max-width: 600px;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .category-card {
+    width: calc((100% - 20px) / 2);
+    height: auto;
+    aspect-ratio: 282 / 376;
+  }
+
+  .category-card img {
+    height: auto;
+  }
+
+  
+  .category-card button {
+    width: 50px;
+    height: 20px;
+    font-size: 10px;
+    left: 30%;
+    bottom: 7%;
+  }
+
+  .arrow.left-arrow {
+    left: 2%;
+  }
+  
+  .arrow.right-arrow {
+    right: 2%;
+  }
+
+    .fourth-section .options-div {
+    width:40%;
+    height: 54px;
+    margin: 3px auto;
+}
+
+.fourth-section .options-div .option-button {
+    width: 30%;
+    height: 46px;
+  font-size: 15px;
+}
+}
+
 
 </style>
 

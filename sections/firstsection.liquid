@@ -1,15 +1,26 @@
-  <div class="first-section-slider">
+<div class="first-section-slider">
   <div class="slider-wrapper">
-    {% for i in (1..3) %}
-      <div class="slide">
-        <img src="{{ 'image-1.png' | asset_url }}" alt="Slide Image" class="slide-img" />
+      <div class="slide" style="background-image: url({{ 'image-1.png' | asset_url }});">
         <div class="first-section-content">
           <p>SALE! UP TO 50% OFF!</p>
           <h2>Summer Sale Collections</h2>
           <button>SHOP NOW</button>
         </div>
       </div>
-    {% endfor %}
+      <div class="slide" style="background-image: url({{ 'image-1.png' | asset_url }});">
+        <div class="first-section-content">
+          <p>SALE! UP TO 50% OFF!</p>
+          <h2>Summer Sale Collections</h2>
+          <button>SHOP NOW</button>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url({{ 'image-1.png' | asset_url }});">
+        <div class="first-section-content">
+          <p>SALE! UP TO 50% OFF!</p>
+          <h2>Summer Sale Collections</h2>
+          <button>SHOP NOW</button>
+        </div>
+      </div>
   </div>
 
   <div class="slider-dots">
@@ -18,6 +29,7 @@
     <span class="dot" data-index="2"></span>
   </div>
 </div>
+
 
 <style>
 .first-section-slider {
@@ -35,19 +47,13 @@
 }
 
 .slide {
-  flex: 0 0 100%;
   position: relative;
-  height: 500px;
-  width: 100%
-}
-
-.slide-img {
-
-  margin-top: -150px;
+  height: 125%;
+  width: 33.3333%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
   z-index: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .first-section-content {
@@ -127,6 +133,106 @@ height: 7px;
 border-radius: 50%;
 background-color: #1F1F1F;
 }
+
+
+@media screen and (max-width: 1024px) {
+  .first-section-slider, {
+    height: 400px;
+    margin: 0;
+  }
+
+  .slide {
+    height: 125%;
+  }
+
+  .first-section-content {
+    width: 80%;
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+
+  .first-section-content h2 {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+
+  .first-section-content p {
+    font-size: 16px;
+  }
+
+  .first-section-content button {
+    width: 140px;
+    height: 45px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .first-section-slider {
+    height: 300px;
+    margin: 0;
+  }
+
+  .slide {
+    height: 125%;
+  }
+
+  .first-section-content {
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+
+  .first-section-content h2 {
+    font-size: 23px;
+    padding-bottom: 12px;
+  }
+
+  .first-section-content p {
+    font-size: 12px;
+  }
+
+  .first-section-content button {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .first-section-slider {
+    height: 210px;
+    margin: -20px 0 0 0;
+  }
+
+  .slide {
+    height: 135%;
+    margin-bottom: 50px;
+  }
+
+  .first-section-content {
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+
+  .first-section-content h2 {
+    font-size: 19px;
+    padding-bottom: 6px;
+  }
+
+  .first-section-content p {
+    font-size: 10px;
+  }
+
+  .first-section-content button {
+    width: 70px;
+    height: 20px;
+    font-size: 10px;
+  }
+}
+
+
 </style>
 
 <script>
@@ -137,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let index = 0;
 
   function updateSlider() {
-    wrapper.style.transform = `translateX(-${index * 100}%)`;
+    wrapper.style.transform = `translateX(-${index * (100 / totalSlides)}%)`;
     dots.forEach(dot => dot.classList.remove('active'));
     dots[index].classList.add('active');
   }
@@ -155,6 +261,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 4000);
 });
 </script>
+
 
 {% schema %}
 {

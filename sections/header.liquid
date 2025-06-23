@@ -1,32 +1,13 @@
-{% comment %} <header class="header">
-  <div class="header-container">
-    <div class="header-left">
-    <h1>ANVOGUE</h1>
-    <nav>
-      <ul>
-        <li>DEMO</li>
-        <li>FEATURES</li>
-        <li>SHOP</li>
-        <li>PRODUCT</li>
-        <li>BLOG</li>
-        <li>PAGES</li>
-      </ul>
-      </nav>
-    </div>
-  <div class="header-right">
-     <img src="{{ 'search.svg' | asset_url }}" alt="Search icon" class="search-bar" />
-     <img src="{{ 'user.svg' | asset_url }}" alt="user icon" class="user-svg" />
-     <img src="{{ 'heart.svg' | asset_url }}" alt="heart icon" class="heart-svg" />
-     <img src="{{ 'bag.svg' | asset_url }}" alt="bag icon" class="bag-svg" />
-</div>
-  </div>
-</header> {% endcomment %}
 <header class="header">
   <div class="header-container">
     <h1 class="logo">ANVOGUE</h1>
 
-    <div class="nav-toggle" id="nav-toggle">
-      <i class="menu-icon"></i>
+     <div class="nav-toggle" id="nav-toggle">
+      <div class="menu-icon" id="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
 
     <div class="nav-menu" id="nav-menu">
@@ -94,6 +75,7 @@
     align-items: center;
     justify-content: space-between;
     margin-right: 70px;
+    transition: right 0.3s ease;
 }
 
 .nav {
@@ -172,7 +154,153 @@ position: relative;
             align-items: center;
 }
 
+.nav-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  height: 3px;
+  background-color: #1F1F1F;
+  width: 100%;
+  border-radius: 2px;
+}
+
+
+
+
+/* Tablet: shrink spacing */
+@media (max-width: 1024px) {
+.header {
+  height: 105px;
+}
+
+  .nav {
+    margin-right: 80px;
+  }
+
+  .nav-menu ul {
+    font-size: 12px;
+    padding-right: 20px;
+  }
+
+  .nav-icons {
+    width: 140px;
+  }
+
+  .nav-icons .search-svg {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 80px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+  }
+
+  #nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: rgb(131, 67, 67);
+    padding: 40px 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 9998;
+    display: flex;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+.nav {
+    width: 50%;
+    background-color: bisque;
+    display: block; /* was flex, not needed */
+    position: absolute;
+    left: 0;
+  }
+
+  .nav ul {
+     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    width: auto;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    width: auto; /* prevent full width stretching */
+  }
+
+  .nav-list li {
+    width: auto;
+    padding: 10px 0;
+    text-align: left;
+  }
+}
+
+.nav-icons {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
+
+
+  .header-container h1 {
+    font-size: 24px;
+    margin-left: 30px;
+  }
+}
+
+
+
+
+
   </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("nav-toggle");
+    const menu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  });
+</script>
+
+
 
 
 {% schema %}
